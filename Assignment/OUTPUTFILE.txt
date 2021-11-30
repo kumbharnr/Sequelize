@@ -1,0 +1,985 @@
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): CREATE TABLE IF NOT EXISTS `Students` (`id` INTEGER NOT NULL auto_increment , `Student_ID` INTEGER, `StudentName` VARCHAR(255), `Stream` VARCHAR(255), `Marks` INTEGER, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Students`
+table is created 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+/Users/navnathkumbhar/Desktop/Sequelize/Assignment/Q1.js:47
+StudentTable.create({
+^
+
+ReferenceError: StudentTable is not defined
+    at Object.<anonymous> (/Users/navnathkumbhar/Desktop/Sequelize/Assignment/Q1.js:47:1)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Students` (`id`,`Student_ID`,`StudentName`,`Stream`,`Marks`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?);
+record is inserted ....
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): CREATE TABLE IF NOT EXISTS `Students` (`id` INTEGER NOT NULL auto_increment , `Student_ID` INTEGER, `StudentName` VARCHAR(255), `Stream` VARCHAR(255), `Marks` INTEGER, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Students`
+table is created 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): DROP TABLE IF EXISTS `Students`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Students` (`id` INTEGER NOT NULL auto_increment , `Student_ID` INTEGER, `StudentName` VARCHAR(255), `Stream` VARCHAR(255), `Marks` INTEGER, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Students`
+table is created 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): CREATE TABLE IF NOT EXISTS `Students` (`id` INTEGER NOT NULL auto_increment , `Student_ID` INTEGER, `StudentName` VARCHAR(255), `Stream` VARCHAR(255), `Marks` INTEGER, `createdAt` DATETIME NOT NULL, `updatedAt` DATETIME NOT NULL, PRIMARY KEY (`id`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Students`
+table is created 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): CREATE TABLE IF NOT EXISTS `Movies` (`Movie_ID` INTEGER , `MovieName` VARCHAR(255), `M_Type` VARCHAR(255), `Languate` VARCHAR(255), `Cast` VARCHAR(255), PRIMARY KEY (`Movie_ID`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Movies`
+table is created 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Movies` (`Movie_ID`,`MovieName`,`M_Type`,`Cast`) VALUES (101,'Godzilla','Action  ','abcd'),(102,'spider man','Sci-fi','acd'),(103,'Iorn man','sci-fi and action','bcd'),(104,'eternal','action ','abc'),(105,'GOT ','action and comedy','ad');
+records is inserted 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): DROP TABLE IF EXISTS `Movies`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Movies` (`Movie_ID` INTEGER , `MovieName` VARCHAR(255), `M_Type` VARCHAR(255), `Languate` VARCHAR(255), `Cast` VARCHAR(255), PRIMARY KEY (`Movie_ID`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Movies`
+table is created 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): DROP TABLE IF EXISTS `Movies`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Movies` (`Movie_ID` INTEGER , `MovieName` VARCHAR(255), `M_Type` VARCHAR(255), `Language` VARCHAR(255), `Cast` VARCHAR(255), PRIMARY KEY (`Movie_ID`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Movies`
+table is created 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Movies` (`Movie_ID`,`MovieName`,`M_Type`,`Language`,`Cast`) VALUES (101,'Godzilla','Action  ','hindi','abcd'),(102,'spider man','Sci-fi','English','acd'),(103,'Iorn man','sci-fi and action','telgu','bcd'),(104,'eternal','action ','hindi','abc'),(105,'GOT ','action and comedy','English','ad');
+records is inserted 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): DROP TABLE IF EXISTS `Movies`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Movies` (`Movie_ID` INTEGER , `MovieName` VARCHAR(255), `M_Type` VARCHAR(255), `Language` VARCHAR(255), `Cast` VARCHAR(255), PRIMARY KEY (`Movie_ID`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Movies`
+table is created 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): DROP TABLE IF EXISTS `Movies`;
+Executing (default): CREATE TABLE IF NOT EXISTS `Movies` (`Movie_ID` INTEGER , `MovieName` VARCHAR(255), `M_Type` VARCHAR(255), `Language` VARCHAR(255), `Cast` INTEGER, PRIMARY KEY (`Movie_ID`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Movies`
+table is created 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Movies` (`Movie_ID`,`MovieName`,`M_Type`,`Language`,`Cast`) VALUES (101,'Godzilla','Action  ','hindi',1000),(102,'spider man','Sci-fi','English',1100),(103,'Iorn man','sci-fi and action','telgu',900),(104,'eternal','action ','hindi',1200),(105,'GOT ','action and comedy','English',500);
+records is inserted 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `MovieName`, `cast` FROM `Movies` AS `Movies` WHERE `Movies`.`MovieName` = 'Godzilla';
+[ { MovieName: 'Godzilla', cast: 1000 } ]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `Movie_ID`, `MovieName`, `M_Type`, `Language`, `Cast` FROM `Movies` AS `Movies` ORDER BY `Movies`.`MovieName`;
+[
+  {
+    Movie_ID: 104,
+    MovieName: 'eternal',
+    M_Type: 'action ',
+    Language: 'hindi',
+    Cast: 1200
+  },
+  {
+    Movie_ID: 101,
+    MovieName: 'Godzilla',
+    M_Type: 'Action  ',
+    Language: 'hindi',
+    Cast: 1000
+  },
+  {
+    Movie_ID: 105,
+    MovieName: 'GOT ',
+    M_Type: 'action and comedy',
+    Language: 'English',
+    Cast: 500
+  },
+  {
+    Movie_ID: 103,
+    MovieName: 'Iorn man',
+    M_Type: 'sci-fi and action',
+    Language: 'telgu',
+    Cast: 900
+  },
+  {
+    Movie_ID: 102,
+    MovieName: 'spider man',
+    M_Type: 'Sci-fi',
+    Language: 'English',
+    Cast: 1100
+  }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): CREATE TABLE IF NOT EXISTS `Employees` (`EMP_ID` INTEGER , `EmpName` VARCHAR(255), `Dept` VARCHAR(255), `Designation` VARCHAR(255), PRIMARY KEY (`EMP_ID`)) ENGINE=InnoDB;
+Executing (default): SHOW INDEX FROM `Employees`
+Table is Created
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Employees` (`EMP_ID`,`EmpName`,`Dept`,`Designation`) VALUES (101,'Navnath','CS  ','hindi'),(102,'Varun','CS','English'),(103,'Nikhil','IT','telgu'),(104,'RAj','IT ','hindi'),(105,'Suraj ','IT','English');
+records is inserted 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EMP_ID`, `EmpName`, `Dept`, `Designation` FROM `Employees` AS `Employees`;
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EMP_ID`, `EmpName`, `Dept`, `Designation` FROM `Employees` AS `Employees`;
+[
+  Employees {
+    dataValues: {
+      EMP_ID: 101,
+      EmpName: 'Navnath',
+      Dept: 'CS  ',
+      Designation: 'hindi'
+    },
+    _previousDataValues: {
+      EMP_ID: 101,
+      EmpName: 'Navnath',
+      Dept: 'CS  ',
+      Designation: 'hindi'
+    },
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  Employees {
+    dataValues: {
+      EMP_ID: 102,
+      EmpName: 'Varun',
+      Dept: 'CS',
+      Designation: 'English'
+    },
+    _previousDataValues: {
+      EMP_ID: 102,
+      EmpName: 'Varun',
+      Dept: 'CS',
+      Designation: 'English'
+    },
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  Employees {
+    dataValues: {
+      EMP_ID: 103,
+      EmpName: 'Nikhil',
+      Dept: 'IT',
+      Designation: 'telgu'
+    },
+    _previousDataValues: {
+      EMP_ID: 103,
+      EmpName: 'Nikhil',
+      Dept: 'IT',
+      Designation: 'telgu'
+    },
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  Employees {
+    dataValues: { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+    _previousDataValues: { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  },
+  Employees {
+    dataValues: {
+      EMP_ID: 105,
+      EmpName: 'Suraj ',
+      Dept: 'IT',
+      Designation: 'English'
+    },
+    _previousDataValues: {
+      EMP_ID: 105,
+      EmpName: 'Suraj ',
+      Dept: 'IT',
+      Designation: 'English'
+    },
+    _changed: Set(0) {},
+    _options: {
+      isNewRecord: false,
+      _schema: null,
+      _schemaDelimiter: '',
+      raw: true,
+      attributes: [Array]
+    },
+    isNewRecord: false
+  }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EMP_ID`, `EmpName`, `Dept`, `Designation` FROM `Employees` AS `Employees`;
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EMP_ID`, `EmpName`, `Dept`, `Designation` FROM `Employees` AS `Employees` WHERE `Employees`.`EMP_ID` = 102;
+{ EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' }
+^[[A^Z
+zsh: suspended  node Q1.js
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EMP_ID`, `EmpName`, `Dept`, `Designation` FROM `Employees` AS `Employees` WHERE `Employees`.`EMP_ID` = 104;
+{ EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' }
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EMP_ID`, `EmpName`, `Dept`, `Designation` FROM `Employees` AS `Employees` WHERE `Employees`.`EmpName` = 'Navnath';
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EmpName`, `dept` FROM `Employees` AS `Employees`;
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+/Users/navnathkumbhar/Desktop/Sequelize/Assignment/Q1.js:199
+EmployeeTable.findAll({attributes:['EmpName','dept'],where:{dept='IT'},raw:true}).then((data)=>{
+                                                            ^^^^^^^^^
+
+SyntaxError: Invalid shorthand property initializer
+    at wrapSafe (internal/modules/cjs/loader.js:979:16)
+    at Module._compile (internal/modules/cjs/loader.js:1027:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EmpName`, `dept` FROM `Employees` AS `Employees` WHERE `Employees`.`dept` = 'IT';
+[
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT count(*) AS `count` FROM `Employees` AS `Employees`;
+Executing (default): SELECT `EMP_ID`, `EmpName`, `Dept`, `Designation` FROM `Employees` AS `Employees`;
+number of records is :5
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EMP_ID`, `EmpName`, `Dept`, `Designation` FROM `Employees` AS `Employees` ORDER BY `Employees`.`EmpName`;
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+/Users/navnathkumbhar/Desktop/Sequelize/Assignment/Q1.js:232
+        [Op.like]:'%th'
+         ^
+
+ReferenceError: Op is not defined
+    at Object.<anonymous> (/Users/navnathkumbhar/Desktop/Sequelize/Assignment/Q1.js:232:10)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EMP_ID`, `EmpName`, `Dept`, `Designation` FROM `Employees` AS `Employees` WHERE `Employees`.`EmpName` LIKE '%th';
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+Executing (default): SELECT EmpName,dept FROM `Employees`
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+Executing (default): SELECT EmpName,dept FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+Executing (default): SELECT EmpName,dept FROM `Employees`WHERE dept='IT'
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+[
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+Executing (default): SELECT EmpName,dept FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+Executing (default): SELECT EmpName,dept FROM `Employees`WHERE dept='IT'
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+Executing (default): SELECT COUNT(*) FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+[
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+[ { 'COUNT(*)': 5 } ]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+Executing (default): SELECT EmpName,dept FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+Executing (default): SELECT EmpName,dept FROM `Employees`WHERE dept='IT'
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+Executing (default): SELECT COUNT(*) as Count_of_table FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+[
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+[ { Count_of_table: 5 } ]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+Executing (default): SELECT EmpName,dept FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+Executing (default): SELECT EmpName,dept FROM `Employees`WHERE dept='IT'
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+Executing (default): SELECT COUNT(*) as Count_of_table_is FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+[
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+[ { Count_of_table_is: 5 } ]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+Executing (default): SELECT EmpName,dept FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+Executing (default): SELECT EmpName,dept FROM `Employees`WHERE dept='IT'
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+Executing (default): SELECT COUNT(*) as Count_of_table_is FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+Executing (default): SELECT * FROM `Employees` ORDER BY EmpName
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+[
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+[ { Count_of_table_is: 5 } ]
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+Executing (default): SELECT EmpName,dept FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+Executing (default): SELECT EmpName,dept FROM `Employees`WHERE dept='IT'
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+Executing (default): SELECT COUNT(*) as Count_of_table_is FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+Executing (default): SELECT * FROM `Employees` ORDER BY EmpName
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+[
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+Executing (default): SELECT EmpName FROM `Employees` WHERE EmpName LIKE '%th
+[ { Count_of_table_is: 5 } ]
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' }
+]
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+(node:6458) UnhandledPromiseRejectionWarning: Error
+    at y.run (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/mysql/query.js:1:1030)
+    at /Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/sequelize.js:1:7125
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:6458) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:6458) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT * FROM `Employees`
+Executing (default): SELECT * FROM `Employees` WHERE EMP_ID=103
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  }
+]
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+Executing (default): SELECT EmpName,dept FROM `Employees`
+Executing (default): SELECT EmpName,dept FROM `Employees`WHERE dept='IT'
+[
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' }
+]
+Executing (default): SELECT COUNT(*) as Count_of_table_is FROM `Employees`
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+Executing (default): SELECT * FROM `Employees` ORDER BY EmpName
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+Executing (default): SELECT * FROM `Employees` WHERE EmpName='Navnath'
+[
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+Executing (default): SELECT EmpName FROM `Employees` WHERE EmpName LIKE '%th'
+[ { Count_of_table_is: 5 } ]
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  },
+  { EMP_ID: 103, EmpName: 'Nikhil', Dept: 'IT', Designation: 'telgu' },
+  { EMP_ID: 104, EmpName: 'RAj', Dept: 'IT ', Designation: 'hindi' },
+  {
+    EMP_ID: 105,
+    EmpName: 'Suraj ',
+    Dept: 'IT',
+    Designation: 'English'
+  },
+  { EMP_ID: 102, EmpName: 'Varun', Dept: 'CS', Designation: 'English' }
+]
+[
+  {
+    EMP_ID: 101,
+    EmpName: 'Navnath',
+    Dept: 'CS  ',
+    Designation: 'hindi'
+  }
+]
+[ { EmpName: 'Navnath' } ]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Students` (`id`,`Student_ID`,`StudentName`,`Stream`,`Marks`,`createdAt`,`updatedAt`) VALUES (NULL,106,'Navnath','CS  ',80,'2021-11-30 09:18:50','2021-11-30 09:18:50'),(NULL,102,'Varun','CS',60,'2021-11-30 09:18:50','2021-11-30 09:18:50'),(NULL,103,'Nikhil','IT',70,'2021-11-30 09:18:50','2021-11-30 09:18:50'),(NULL,104,'RAj','IT ',75,'2021-11-30 09:18:50','2021-11-30 09:18:50'),(NULL,105,'Suraj ','IT',65,'2021-11-30 09:18:50','2021-11-30 09:18:50');
+records is inserted 
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Error: Invalid value { Marks: 75 }
+    at Object.escape (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/sql-string.js:1:862)
+    at I.escape (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:15467)
+    at /Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:40907
+    at Array.map (<anonymous>)
+    at I._whereParseSingleValueObject (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:40895)
+    at I.whereItemQuery (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:37343)
+    at /Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:35485
+    at Array.forEach (<anonymous>)
+    at I.whereItemsQuery (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:35448)
+    at I.getWhereConditions (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:42861)
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+/Users/navnathkumbhar/Desktop/Sequelize/Assignment/Q1.js:292
+        [Op.and,gte]:[{Stream:'CS'},{Marks:75}]
+               ^
+
+SyntaxError: Unexpected token ','
+    at wrapSafe (internal/modules/cjs/loader.js:979:16)
+    at Module._compile (internal/modules/cjs/loader.js:1027:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `id`, `Student_ID`, `StudentName`, `Stream`, `Marks`, `createdAt`, `updatedAt` FROM `Students` AS `Students` WHERE (`Students`.`Stream` = 'CS' AND `Students`.`Marks` = 75);
+[]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Error: Invalid value { Stream: 'CS' }
+    at Object.escape (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/sql-string.js:1:862)
+    at I.escape (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:15467)
+    at /Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:40907
+    at Array.map (<anonymous>)
+    at I._whereParseSingleValueObject (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:40895)
+    at I.whereItemQuery (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:37343)
+    at /Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:35485
+    at Array.forEach (<anonymous>)
+    at I.whereItemsQuery (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:35448)
+    at I.getWhereConditions (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-generator.js:1:42861)
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `id`, `Student_ID`, `StudentName`, `Stream`, `Marks`, `createdAt`, `updatedAt` FROM `Students` AS `Students` WHERE (`Students`.`Stream` = 'CS' AND `Students`.`Marks` = 75);
+[]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `id`, `Student_ID`, `StudentName`, `Stream`, `Marks`, `createdAt`, `updatedAt` FROM `Students` AS `Students` WHERE (`Students`.`Stream` = 'CS' AND `Students`.`Marks` = 70);
+[]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `id`, `Student_ID`, `StudentName`, `Stream`, `Marks`, `createdAt`, `updatedAt` FROM `Students` AS `Students` WHERE (`Students`.`Stream` = 'CS' AND `Students`.`Marks` = 75);
+[]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Employees` (`Student_ID`,`EmpName`) VALUES (?,?);
+(node:7273) UnhandledPromiseRejectionWarning: Error
+    at y.run (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/mysql/query.js:1:1030)
+    at /Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/sequelize.js:1:7125
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+    at async w.insert (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/dialects/abstract/query-interface.js:1:6936)
+    at async Object.save (/Users/navnathkumbhar/Desktop/Sequelize/node_modules/sequelize/dist/lib/model.js:1:53725)
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7273) UnhandledPromiseRejectionWarning: Unhandled promise rejection. This error originated either by throwing inside of an async function without a catch block, or by rejecting a promise which was not handled with .catch(). To terminate the node process on unhandled promise rejection, use the CLI flag `--unhandled-rejections=strict` (see https://nodejs.org/api/cli.html#cli_unhandled_rejections_mode). (rejection id: 1)
+(node:7273) [DEP0018] DeprecationWarning: Unhandled promise rejections are deprecated. In the future, promise rejections that are not handled will terminate the Node.js process with a non-zero exit code.
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EmpName`, `dept` FROM `Employees` AS `Employees`;
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): SELECT `EmpName`, `dept` FROM `Employees` AS `Employees`;
+[
+  { EmpName: 'Navnath', dept: 'CS  ' },
+  { EmpName: 'Varun', dept: 'CS' },
+  { EmpName: 'Nikhil', dept: 'IT' },
+  { EmpName: 'RAj', dept: 'IT ' },
+  { EmpName: 'Suraj ', dept: 'IT' }
+]
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Employees` (`EMP_ID`,`EmpName`,`dept`,`Designation`) VALUES (?,?,?,?);
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Employees` (`EMP_ID`,`EmpName`,`dept`,`Designation`) VALUES (?,?,?,?);
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Employees` (`EMP_ID`,`EmpName`,`dept`,`Designation`) VALUES (?,?,?,?);
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Employees` (`EMP_ID`,`EmpName`,`dept`,`Designation`) VALUES (?,?,?,?);
+record is inserted ....
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): INSERT INTO `Employees` (`EMP_ID`,`EmpName`,`dept`,`Designation`) VALUES (107,'Navnath','CS  ','as'),(108,'Varun','CS','sd'),(109,'Nikhil','IT','df'),(110,'RAj','IT ','cv'),(111,'Suraj ','IT','rt');
+the error is :SequelizeUniqueConstraintError: Validation error
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): UPDATE `Employees` SET `EmpName`=? WHERE `ProductName` = ?
+error is :SequelizeDatabaseError: Unknown column 'ProductName' in 'where clause'
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): UPDATE `Employees` SET `EmpName`=? WHERE `EmpName` = ?
+data is updated
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): DELETE FROM `Employees` WHERE `EmpName` = 'Varun'
+record deleted
+navnathkumbhar@MTXs-MBP Assignment % node Q1.js
+Executing (default): DROP TABLE IF EXISTS `Employees`;
+Executing (default): DELETE FROM `Employees` WHERE `EmpName` = 'Varun'
+table dropped....
+error is :SequelizeDatabaseError: Table 'assignment.employees' doesn't exist
+navnathkumbhar@MTXs-MBP Assignment % 
