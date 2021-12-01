@@ -430,6 +430,15 @@ EmployeeTable.drop().then(()=>{
 // Q21 ------------------------------------------------------------
 //  Create two tables in SQL in workbench and establish a relationship between them as Primary Key and Foreign key. 
 
+sequelize.query("select ProductOrders.Description,Customer.CustName from ProductOrders   INNER JOIN Customer  ON ProductOrders.ID=Customer.ID;",
+  { type : sequelize.QueryTypes.SELECT }
+)
+.then( (data)=> {
+  console.log(data);
+});
+
+
+
 // use assignment;
 
 // CREATE TABLE Customer(ID INT NOT NULL,C_Name VARCHAR(50),Location VARCHAR(50),PRIMARY KEY(ID));
